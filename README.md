@@ -99,12 +99,13 @@ Nota: Para que la imagen encaje con el diseño de la tarjeta, es preferible que 
 
 ## Imagenes de ejemplo :camera:
 
-![tarjeta-vista-móvil]("https://github.com/ChristBM/cbm-merchandise-card/blob/main/img/img1.jpg")
+![tarjeta-vista-móvil](https://github.com/ChristBM/cbm-merchandise-card/blob/main/img/img1.jpg)
 
-![tarjeta-vista-pc]("https://github.com/ChristBM/cbm-merchandise-card/blob/main/img/img2.jpg")
+![tarjeta-vista-pc](https://github.com/ChristBM/cbm-merchandise-card/blob/main/img/img2.jpg)
 
-![tarjeta-vista-móvil-3d]("https://github.com/ChristBM/cbm-merchandise-card/blob/main/img/img3.jpg")
+![tarjeta-vista-móvil-3d](https://github.com/ChristBM/cbm-merchandise-card/blob/main/img/img3.jpg)
 
-![tarjeta-vista-pc-3d]("https://github.com/ChristBM/cbm-merchandise-card/blob/main/img/img4.jpg")
+![tarjeta-vista-pc-3d](https://github.com/ChristBM/cbm-merchandise-card/blob/main/img/img4.jpg)
+
 ## Licencia :unlock:
 [MIT](https://choosealicense.com/licenses/mit/)
