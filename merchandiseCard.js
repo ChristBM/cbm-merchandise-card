@@ -26,7 +26,7 @@ customElements.define( 'cbm-merchandise-card', class merchandiseCard extends HTM
         this.card.style.transform = `rotateY(${yAxis/20}deg) rotateX(${xAxis/25}deg)`
     }
 
-    mouseEnterCard(event) {
+    mouseEnterCard() {
         this.card = this.shadowRoot.querySelector('.card')
         this.brand = this.shadowRoot.querySelector('.card__brand')
         this.imagen = this.shadowRoot.querySelector('.card__img')
@@ -43,7 +43,7 @@ customElements.define( 'cbm-merchandise-card', class merchandiseCard extends HTM
         }
     }
 
-    mouseLeaveCard(event) {
+    mouseLeaveCard() {
         this.card = this.shadowRoot.querySelector('.card')
         this.brand = this.shadowRoot.querySelector('.card__brand')
         this.imagen = this.shadowRoot.querySelector('.card__img')
@@ -66,10 +66,10 @@ customElements.define( 'cbm-merchandise-card', class merchandiseCard extends HTM
             this.mouseMovedCard(event)
         }
         else if( event.type === "mouseenter" ){
-            this.mouseEnterCard(event)
+            this.mouseEnterCard()
         }
         else if( event.type === "mouseleave" ){
-            this.mouseLeaveCard(event)
+            this.mouseLeaveCard()
         }
     }
 
@@ -78,18 +78,18 @@ customElements.define( 'cbm-merchandise-card', class merchandiseCard extends HTM
             ${this.getStyles()}
             <section class="card selectDisable">
                 <div class="card__section-up">
-                    <p class="card__brand">${this.brand}</p>
-                    <img class="card__img" src="${this.prod_img}" alt="${this.alt_img}">
+                    <p class="card__brand">${this.brand || ""}</p>
+                    <img class="card__img" src="${this.prod_img}" alt="${this.alt_img || ""}">
                 </div>
                 <div class="card__section-down">
                     <div class="card__text">
-                        <h2 class="card__name">${this.name}</h2>
-                        <p class="card__model">${this.model}</p>
+                        <h2 class="card__name">${this.name || ""}</h2>
+                        <p class="card__model">${this.model || ""}</p>
                     </div>
                     <p class="card__description"><slot></slot></p>
                     <div class="card__pricebuy">
-                        <p class="card__price">${this.price}</p>
-                        <button class="card__btn">${this.name_button}</button>
+                        <p class="card__price">${this.price || ""}</p>
+                        <button class="card__btn">${this.name_button || ""}</button>
                     </div>
                 </div>
             </section>
@@ -103,31 +103,32 @@ customElements.define( 'cbm-merchandise-card', class merchandiseCard extends HTM
         :host {
             /* colors */
             --primary-color: #504682;
-            --secundary-color: rgb(228, 228, 228);
+            --secundary-color: #e4e4e4;
             /* brand-style */
-            --brand-color: rgba(54, 50, 50, 0.3);
+            --brand-color: #3632324d;
             --brand-font: Arial, Helvetica, sans-serif;
             --brand-size: 90px;
             /* name-style */
-            --name-color: rgb(27, 25, 25);
+            --name-color: #1b1919;
             --name-font: Arial, Helvetica, sans-serif;
             --name-size: 22px;
             /* model-style */
-            --model-color: rgb(124, 120, 120);
+            --model-color: #7c7878;
             --model-font: Arial, Helvetica, sans-serif;
             --model-size: 10px;
             /* description-style */
-            --description-color: rgb(51, 51, 51);
+            --description-color: #333333;
             --description-font: Arial, Helvetica, sans-serif;
             --description-size: 12px;
             /* price-style */
-            --price-color: rgb(110, 106, 106);
+            --price-color: #6e6a6a;
             --price-font: Arial, Helvetica, sans-serif;
             --price-size: 25px;
             /* btn-style */
             --btn-width: 80px;
             --btn-height: 30px;
             --btn-border-radius: 20px;
+            --btn-hover-color: #7b6dc0;
             /* 3d */
             perspective: 1000px;
             perspective-origin: center;
@@ -280,7 +281,7 @@ customElements.define( 'cbm-merchandise-card', class merchandiseCard extends HTM
         /* -------------------------------------------- */
         .card__btn:hover {
             cursor: pointer;
-            background-color: #7b6dc0;
+            background-color: var(--btn-hover-color);
             color: #161618;
         }
 
@@ -379,4 +380,3 @@ customElements.define( 'cbm-merchandise-card', class merchandiseCard extends HTM
         this.removeEventListener( "mouseleave", this )
     }
 })
-
