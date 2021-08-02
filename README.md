@@ -97,7 +97,7 @@ cbm-merchandise-card {
 
 Nota: Para que la imagen encaje con el diseño de la tarjeta, es preferible que esta sea una imagen sin fondo (.png) del producto.
 
-## Evento Click para el Botón de la tarjeta 
+## Evento Click para el Botón de la tarjeta :bell:
 
 Si deseas usar el evento click del botón, lo pudieras hacer de la siguiente manera:
 
