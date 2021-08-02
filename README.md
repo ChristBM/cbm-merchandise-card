@@ -97,6 +97,19 @@ cbm-merchandise-card {
 
 Nota: Para que la imagen encaje con el diseño de la tarjeta, es preferible que esta sea una imagen sin fondo (.png) del producto.
 
+## Evento Click para el Botón de la tarjeta 
+
+Si deseas usar el evento click del botón, lo pudieras hacer de la siguiente manera:
+
+```javascript
+    const cbm_merchandise_card = document.querySelector('cbm-merchandise-card')
+    function cardBtnClick(event){
+        if( event.path[0].className === 'card__btn'){
+            console.log('The button of the card has been clicked')
+        }
+    }
+    cbm_merchandise_card.addEventListener( 'click', cardBtnClick )
+```
 ## Imagenes de ejemplo :camera:
 
 ![tarjeta-vista-móvil](https://github.com/ChristBM/cbm-merchandise-card/blob/main/img/img1.jpg)
